@@ -1,5 +1,11 @@
 <html>
-  <head></head>
+  <head>
+    <style>
+      body {
+        background: <%= color %>;
+      }
+    </style>
+  </head>
   <body>
     <form>
       <input type='text' name='guess' />
@@ -8,6 +14,7 @@
     <p>
       <%= message %>
       Your guess is <%= $guess %>
+      You have <%= @@guesses_left %> guesses before the number changes and you lose.
     </p>
   </body>
 </html>
